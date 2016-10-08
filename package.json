@@ -1,0 +1,38 @@
+{
+  "name": "transform-spread-iterable",
+  "version": "1.4.1",
+  "description": "An iterable transform that spread each iterable received and emit its items",
+  "scripts": {
+    "test": "ava && xo --ignore example.js",
+    "setup": "rollup -f cjs main.js --output index.js",
+    "cover-test": "nyc ava && xo --ignore example.js",
+    "cover-publish": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "keywords": [],
+  "author": "Andrea Parodi <andrea@parro.it>",
+  "license": "MIT",
+  "dependencies": {
+    "curry": "^1.2.0"
+  },
+  "files": [
+    "index.js",
+    "example.js"
+  ],
+  "tonicExampleFilename": "example.js",
+  "babel": {
+    "plugins": [
+      "transform-es2015-modules-commonjs"
+    ]
+  },
+  "jsnext:main": "main.js",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "coveralls": "^2.11.14",
+    "nyc": "^8.3.0",
+    "rollup": "^0.36.1",
+    "xo": "^0.16.0"
+  },
+  "repository": "parro-it/transform-spread-iterable"
+}
