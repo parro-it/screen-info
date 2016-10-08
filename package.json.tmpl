@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "$package_description",
   "scripts": {
-    "test": "ava && xo --ignore example.js",
+    "test": "ava && xo --ignore example.js --ignore index.js",
     "setup": "rollup -f cjs main.js --output index.js",
-    "cover-test": "nyc ava && xo --ignore example.js",
+    "cover-test": "nyc ava && xo --ignore example.js --ignore index.js",
     "cover-publish": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [],
