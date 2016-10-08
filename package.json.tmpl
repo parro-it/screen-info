@@ -1,0 +1,26 @@
+{
+  "name": "$package_name",
+  "version": "1.0.0",
+  "description": "$package_description",
+  "scripts": {
+    "test": "ava && xo --ignore example.js",
+    "setup": "rollup -f cjs main.js --output index.js",
+    "cover-test": "nyc ava && xo --ignore example.js",
+    "cover-publish": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "keywords": [],
+  "author": "$package_author_name <$package_author_email>",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "example.js"
+  ],
+  "tonicExampleFilename": "example.js",
+  "babel": {
+    "plugins": [
+      "transform-es2015-modules-commonjs"
+    ]
+  },
+  "jsnext:main": "main.js",
+  "repository": "$package_author/$package_name"
+}
