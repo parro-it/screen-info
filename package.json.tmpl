@@ -1,20 +1,22 @@
 {
   "name": "$package_name",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "$package_description",
-  "scripts": {
-    "test": "ava && xo --ignore example.js --ignore index.js",
-    "setup": "rollup -f cjs main.js --output index.js",
-    "cover-test": "nyc ava && xo --ignore example.js --ignore index.js",
-    "cover-publish": "nyc report --reporter=text-lcov | coveralls"
-  },
-  "keywords": [],
+  "repository": "$package_author/$package_name"
   "author": "$package_author_name <$package_author_email>",
   "license": "MIT",
   "files": [
     "index.js",
     "example.js"
   ],
+  "scripts": {
+    "test": "ava --require babel-register && xo --ignore example.js --ignore index.js",
+    "setup": "rollup -f cjs main.js --output index.js",
+    "cover-test": "nyc ava --require babel-register && xo --ignore example.js --ignore index.js",
+    "cover-publish": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "keywords": [],
+
   "tonicExampleFilename": "example.js",
   "babel": {
     "plugins": [
@@ -22,5 +24,4 @@
     ]
   },
   "jsnext:main": "main.js",
-  "repository": "$package_author/$package_name"
 }
