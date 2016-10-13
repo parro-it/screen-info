@@ -23,5 +23,5 @@
       "transform-es2015-modules-commonjs"
     ]
   },
-  "jsnext:main": "main.js",
+  "jsnext:main": "main.js"
 }
