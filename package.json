@@ -10,20 +10,14 @@
     "example.js"
   ],
   "scripts": {
-    "ava": "ava --require babel-register",
     "xo": "xo --ignore example.js --ignore index.js",
-    "test": "npm run ava --silent && npm run xo --silent",
+    "test": "npm run setup --silent && ava && xo --ignore example.js --ignore index.js",
     "setup": "rollup -f cjs main.js --output index.js",
-    "cover-test": "nyc npm run ava --silent && npm run xo --silent",
+    "cover-test": "npm run setup --silent && nyc ava && npm run xo --ignore example.js --ignore index.js",
     "cover-publish": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [],
 
   "tonicExampleFilename": "example.js",
-  "babel": {
-    "plugins": [
-      "transform-es2015-modules-commonjs"
-    ]
-  },
   "jsnext:main": "main.js"
 }
