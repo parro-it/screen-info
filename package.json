@@ -10,9 +10,11 @@
     "example.js"
   ],
   "scripts": {
-    "test": "ava --require babel-register && xo --ignore example.js --ignore index.js",
+    "ava": "ava --require babel-register",
+    "xo": "xo --ignore example.js --ignore index.js",
+    "test": "npm run ava --silent && npm run xo --silent",
     "setup": "rollup -f cjs main.js --output index.js",
-    "cover-test": "nyc ava --require babel-register && xo --ignore example.js --ignore index.js",
+    "cover-test": "nyc npm run ava --silent && npm run xo --silent",
     "cover-publish": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [],
