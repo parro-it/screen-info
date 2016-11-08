@@ -9,10 +9,10 @@ export package_description
 echo Template repo locally cloned. Running template init procedure.
 
 # create repo on github
--gh re --no-browser --new $package_name --user $package_author --description "$package_description"
+gh re --no-browser --new $package_name --user $package_author --description "$package_description"
 
 # change origin remote url
-git remote set-url origin http://devel.collabra.it/$package_author/$package_name.git
+git remote set-url origin https://github.com/$package_author/$package_name.git
 
 echo Rendering templates $(find ./*)
 
