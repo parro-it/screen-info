@@ -1,6 +1,6 @@
-# $package_name
+# screen-info
 
-> $package_description
+> Multiplatform screen & monitors info
 
 background details relevant to understanding what this module does
 
@@ -9,9 +9,9 @@ background details relevant to understanding what this module does
 description of the example
 
 ```js
-const $package_var = require('$package_name');
+const screenInfo = require('screen-info');
 
-console.log({$package_var});
+console.log({screenInfo});
 ```
 
 This will output
@@ -19,16 +19,16 @@ This will output
 ```
 ```
 
-[![Travis Build Status](https://img.shields.io/travis/$package_author/$package_name/master.svg)](http://travis-ci.org/$package_author/$package_name)
-[![Code Climate](https://img.shields.io/codeclimate/github/$package_author/$package_name.svg)](https://codeclimate.com/github/$package_author/$package_name)
-[![Coverage Status](https://coveralls.io/repos/github/$package_author/$package_name/badge.svg?branch=master)](https://coveralls.io/github/$package_author/$package_name?branch=master)
-[![NPM downloads](https://img.shields.io/npm/dt/$package_name.svg)](https://npmjs.org/package/$package_name)
+[![Travis Build Status](https://img.shields.io/travis/parro-it/screen-info/master.svg)](http://travis-ci.org/parro-it/screen-info)
+[![Code Climate](https://img.shields.io/codeclimate/github/parro-it/screen-info.svg)](https://codeclimate.com/github/parro-it/screen-info)
+[![Coverage Status](https://coveralls.io/repos/github/parro-it/screen-info/badge.svg?branch=master)](https://coveralls.io/github/parro-it/screen-info?branch=master)
+[![NPM downloads](https://img.shields.io/npm/dt/screen-info.svg)](https://npmjs.org/package/screen-info)
 
 
 ## API
 
 ```js
-const $package_var = (): object
+const screenInfo = (): object
 ```
 
 description of the function signature
@@ -38,7 +38,7 @@ description of the function signature
 With [npm](https://npmjs.org/) installed, run
 
 ```
-$ npm install $package_name
+$ npm install screen-info
 ```
 
 ## See Also

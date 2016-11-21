@@ -1,4 +1,4 @@
-import $package_var from '$package_name';
+import screenInfo from 'screen-info';
 
-console.log({$package_var});
+console.log({screenInfo});
 
