@@ -3,27 +3,29 @@
   "version": "0.0.1",
   "description": "Multiplatform screen & monitors info",
   "repository": "parro-it/screen-info",
-  "author": "Andrea Parodi <a.parodi@inet2.it>",
+  "author": "Andrea Parodi <andrea@parro.it>",
   "license": "MIT",
   "files": [
     "index.js",
     "example.js"
   ],
   "scripts": {
-    "xo": "xo --ignore example.js --ignore index.js",
-    "test": "npm run setup --silent && ava && xo --ignore example.js --ignore index.js",
-    "setup": "rollup -f cjs main.js --output index.js",
-    "cover-test": "npm run setup --silent && nyc ava && npm run xo --ignore example.js --ignore index.js",
-    "cover-publish": "nyc report --reporter=text-lcov | coveralls"
+    "test": "npm run setup --silent && ava && xo",
+    "autogypi": "autogypi",
+    "node-gyp": "node-gyp",
+    "install": "autogypi && npm run setup",
+    "setup": "node-gyp configure build"
   },
   "keywords": [],
   "tonicExampleFilename": "example.js",
   "jsnext:main": "main.js",
   "devDependencies": {
     "ava": "^0.17.0",
-    "coveralls": "^2.11.15",
-    "nyc": "^9.0.1",
-    "rollup": "^0.36.3",
     "xo": "^0.17.1"
+  },
+  "dependencies": {
+    "autogypi": "^0.2.2",
+    "nbind": "^0.3.5",
+    "node-gyp": "^3.4.0"
   }
 }

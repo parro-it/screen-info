@@ -1,6 +1,10 @@
 import test from 'ava';
-import screenInfo from '.';
+import ScreenInfo from '.';
 
 test('exports a function', t => {
-	t.is(typeof screenInfo, 'function');
+	t.is(typeof ScreenInfo.mainDisplaySize, 'function');
+});
+
+test('return something', t => {
+	t.is(ScreenInfo.mainDisplaySize(), 42);
 });
