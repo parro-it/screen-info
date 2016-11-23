@@ -12,7 +12,7 @@
     'conditions': [
       ['OS == "mac"', {
 	    'sources': [
-	      'macos/screen.mm'
+	      'src/macos-screen.mm'
 	    ],
         'include_dirs': [
           'System/Library/Frameworks/CoreFoundation.Framework/Headers',

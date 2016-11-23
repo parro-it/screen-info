@@ -1,23 +1,16 @@
 #include <ApplicationServices/ApplicationServices.h>
 #include "nbind/nbind.h"
+#include "screen-info.h"
 
-
-struct _MMSize {
-	size_t width;
-	size_t height;
-};
-
-typedef struct _MMSize MMSize;
 
 
 struct ScreenInfo {
-	static int mainDisplaySize() {
-		return 42;
-		/*CGDirectDisplayID displayID = CGMainDisplayID();
-		return MMSizeMake(
+	static ScreenSize mainDisplaySize() {
+		CGDirectDisplayID displayID = CGMainDisplayID();
+		return ScreenSize(
 			CGDisplayPixelsWide(displayID),
 			CGDisplayPixelsHigh(displayID)
-		);*/
+		);
 	}
 };
 
