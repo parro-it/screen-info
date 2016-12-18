@@ -31,10 +31,7 @@
       ['OS == "linux"', {
         'link_settings': {
           'libraries': [
-            '-lpng',
-            '-lz',
             '-lX11',
-            '-lXtst'
           ]
         },
 
