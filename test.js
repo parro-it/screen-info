@@ -1,15 +1,18 @@
 import test from 'ava';
 import {ScreenSize, mainDisplaySize} from '.';
 
+const expected = process.pltform === 'darwin' ?
+	{width: 1024, heigth: 768} :
+	{width: 1280, heigth: 1024};
+
 test('exports a function', t => {
 	t.is(typeof mainDisplaySize, 'function');
 });
 
 test('return something', t => {
 	const size = mainDisplaySize();
-	console.log(size)
-	t.is(size.width, 1280);
-	t.is(size.height, 1024);
+	t.is(size.width, expected.width);
+	t.is(size.height, expected.height);
 });
 
 test('ScreenSize has width and height', t => {
