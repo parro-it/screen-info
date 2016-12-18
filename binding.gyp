@@ -1,8 +1,8 @@
 {
 	'targets': [{
 		"includes": [
-		"auto.gypi"
-	],
+			"auto.gypi"
+		],
 
 
 
@@ -64,8 +64,6 @@
 				]
 			}]
 		],
-
-
 	}],
 	"includes": [
 		"auto-top.gypi"

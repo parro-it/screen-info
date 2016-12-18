@@ -14,7 +14,7 @@
     "autogypi": "autogypi",
     "node-gyp": "node-gyp",
     "install": "autogypi && npm run setup",
-    "setup": "node-gyp configure build --silent"
+    "setup": "node-gyp configure build"
   },
   "keywords": [],
   "tonicExampleFilename": "example.js",
