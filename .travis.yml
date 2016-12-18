@@ -3,7 +3,6 @@ os:
   - osx
 
 dist: trusty
-
 language: node_js
 
 node_js:
