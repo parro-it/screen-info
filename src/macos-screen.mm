@@ -1,8 +1,6 @@
 #include <ApplicationServices/ApplicationServices.h>
 #include "nbind/nbind.h"
-#include "screen-info.h"
-
-
+#include "screen-size.h"
 
 struct ScreenInfo {
 	static ScreenSize mainDisplaySize() {
@@ -13,8 +11,3 @@ struct ScreenInfo {
 		);
 	}
 };
-
-
-NBIND_CLASS(ScreenInfo) {
-	method(mainDisplaySize);
-}

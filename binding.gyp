@@ -4,15 +4,13 @@
 		"auto.gypi"
 	],
 
-    'cflags': [
-		"-std=c++11",
-	 	"-stdlib=libc++"
-	],
+
 
     'conditions': [
       ['OS == "mac"', {
 	    'sources': [
-	      'src/macos-screen.mm'
+	      'src/macos-screen.mm',
+        'src/common.cc'
 	    ],
         'include_dirs': [
           'System/Library/Frameworks/CoreFoundation.Framework/Headers',
@@ -33,22 +31,21 @@
       ['OS == "linux"', {
         'link_settings': {
           'libraries': [
-            '-lpng',
-            '-lz',
             '-lX11',
-            '-lXtst'
           ]
         },
 
         'sources': [
-          'src/linux-screen.cc'
+          'src/linux-screen.cc',
+          'src/common.cc'
         ]
       }],
 
       ["OS=='win'", {
         'defines': ['IS_WINDOWS'],
         'sources': [
-          'src/windows-screen.cc'
+          'src/windows-screen.cc',
+          'src/common.cc'
         ]
       }]
     ],

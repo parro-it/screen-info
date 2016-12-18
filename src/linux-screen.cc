@@ -1,20 +1,22 @@
-#include <ApplicationServices/ApplicationServices.h>
+#include "nbind/nbind.h"
+#include "nbind/api.h"
+#include <X11/Xlib.h>
+#include "xdisplay.h"
+#include "screen-size.h"
 
-MMSize getMainDisplaySize(void) {
-	CGDirectDisplayID displayID = CGMainDisplayID();
-	return MMSizeMake(
-		CGDisplayPixelsWide(displayID),
-		CGDisplayPixelsHigh(displayID)
-	);
-/* #elif defined(USE_X11)
-	Display *display = XGetMainDisplay();
-	const int screen = DefaultScreen(display);
+struct ScreenInfo {
+	static ScreenSize mainDisplaySize() {
+		Display *display = XGetMainDisplay();
+		const int screen = DefaultScreen(display);
 
-	return MMSizeMake((size_t)DisplayWidth(display, screen),
-	                  (size_t)DisplayHeight(display, screen));
-#elif defined(IS_WINDOWS)
-	return MMSizeMake((size_t)GetSystemMetrics(SM_CXSCREEN),
-	                  (size_t)GetSystemMetrics(SM_CYSCREEN));
-#endif
-*/
+		return ScreenSize(
+			(size_t)DisplayWidth(display, screen),
+			(size_t)DisplayHeight(display, screen)
+		);
+	}
+};
+
+NBIND_CLASS(ScreenInfo) {
+	construct<>();
+	method(mainDisplaySize);
 }

@@ -10,11 +10,11 @@
     "example.js"
   ],
   "scripts": {
-    "test": "npm run setup --silent && ava && xo",
+    "test": "npm run setup && ava && xo",
     "autogypi": "autogypi",
     "node-gyp": "node-gyp",
     "install": "autogypi && npm run setup",
-    "setup": "node-gyp configure build"
+    "setup": "node-gyp configure build --silent"
   },
   "keywords": [],
   "tonicExampleFilename": "example.js",
