@@ -16,6 +16,11 @@ class ScreenSize {
 		output(this._width, this._height);
 	}
 
+	toJSON() {
+		const {width, height} = this;
+		return {width, height};
+	}
+
 	toString(output = this) {
 		return `${output.width}x${output.height}`;
 	}

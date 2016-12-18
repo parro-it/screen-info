@@ -11,3 +11,8 @@ struct ScreenInfo {
 		);
 	}
 };
+
+NBIND_CLASS(ScreenInfo) {
+	construct<>();
+	method(mainDisplaySize);
+}
