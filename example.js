@@ -1,4 +1,9 @@
-import screenInfo from 'screen-info';
+import {mainDisplaySize} from '.';
 
-console.log({screenInfo});
+const size = mainDisplaySize();
+console.log(`
+	Current screen size is ${size}
+	${size.width} pixels width,
+	${size.height} pixels height,
+`);
 

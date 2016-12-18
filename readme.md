@@ -2,21 +2,30 @@
 
 > Multiplatform screen & monitors info
 
-background details relevant to understanding what this module does
+This is a native multiplatform module to query the system for current display info.
 
 ## Usage
 
-description of the example
+Get current screen size & print it to console:
 
 ```js
-const screenInfo = require('screen-info');
+import {mainDisplaySize} from '.';
 
-console.log({screenInfo});
+const size = mainDisplaySize();
+console.log(`
+	Current screen size is ${size}
+	${size.width} pixels width,
+	${size.height} pixels height
+`);
+
 ```
 
 This will output
 
 ```
+Current screen size is 800x600
+800 pixels width,
+600 pixels height
 ```
 
 [![Travis Build Status](https://img.shields.io/travis/parro-it/screen-info/master.svg)](http://travis-ci.org/parro-it/screen-info)
@@ -28,10 +37,10 @@ This will output
 ## API
 
 ```js
-const screenInfo = (): object
+mainDisplaySize: () => {width:number, height: number}
 ```
 
-description of the function signature
+return the size of default system display
 
 ## Install
 
