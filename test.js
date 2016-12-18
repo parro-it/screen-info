@@ -24,5 +24,5 @@ test('ScreenSize has custom toString', t => {
 
 test('ScreenSize can be stringified to json', t => {
 	const size = new ScreenSize(800, 600);
-	t.is(JSON.stringify(size), '{"width":800,height:600}');
+	t.is(JSON.stringify(size), '{"width":800,"height":600}');
 });
