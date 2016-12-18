@@ -10,7 +10,7 @@
     "example.js"
   ],
   "scripts": {
-    "test": "npm run setup && ava && xo",
+    "test": "ava && xo",
     "autogypi": "autogypi",
     "node-gyp": "node-gyp",
     "install": "autogypi && npm run setup",

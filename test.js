@@ -16,3 +16,8 @@ test('ScreenSize has width and height', t => {
 	t.is(size.width, 1);
 	t.is(size.height, 2);
 });
+
+test('ScreenSize has custom toString', t => {
+	const size = new ScreenSize(800, 600);
+	t.is(size.toString(), '800x600');
+});
