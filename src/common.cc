@@ -1,4 +1,3 @@
-#include "nbind/nbind.h"
 #include "screen-size.h"
 
 ScreenSize::ScreenSize(size_t width, size_t height) {
@@ -17,6 +16,8 @@ size_t ScreenSize::getHeight() {
 void ScreenSize::toJS(nbind::cbOutput output) {
 	output(w, h);
 }
+
+#include "nbind/nbind.h"
 
 NBIND_CLASS(ScreenSize) {
   construct<size_t, size_t>();
