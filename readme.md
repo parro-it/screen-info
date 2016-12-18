@@ -29,9 +29,7 @@ Current screen size is 800x600
 ```
 
 [![Travis Build Status](https://img.shields.io/travis/parro-it/screen-info/master.svg)](http://travis-ci.org/parro-it/screen-info)
-[![Code Climate](https://img.shields.io/codeclimate/github/parro-it/screen-info.svg)](https://codeclimate.com/github/parro-it/screen-info)
-[![Coverage Status](https://coveralls.io/repos/github/parro-it/screen-info/badge.svg?branch=master)](https://coveralls.io/github/parro-it/screen-info?branch=master)
-[![NPM downloads](https://img.shields.io/npm/dt/screen-info.svg)](https://npmjs.org/package/screen-info)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/0j904vwgk43vuh3h?svg=true)](https://ci.appveyor.com/project/parro-it/screen-info)[![NPM downloads](https://img.shields.io/npm/dt/screen-info.svg)](https://npmjs.org/package/screen-info)
 
 
 ## API
