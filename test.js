@@ -1,9 +1,9 @@
 import test from 'ava';
 import {ScreenSize, mainDisplaySize} from '.';
 
-const expected = process.pltform === 'darwin' ?
-	{width: 1024, heigth: 768} :
-	{width: 1280, heigth: 1024};
+const expected = process.platform === 'darwin' ?
+	{width: 1024, height: 768} :
+	{width: 1280, height: 1024};
 
 test('exports a function', t => {
 	t.is(typeof mainDisplaySize, 'function');

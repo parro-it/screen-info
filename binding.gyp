@@ -43,7 +43,6 @@
       }],
 
       ["OS=='win'", {
-        'defines': ['IS_WINDOWS'],
         'sources': [
           'src/windows-screen.cc',
           'src/common.cc'
