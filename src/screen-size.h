@@ -1,3 +1,6 @@
+#ifndef SCREEN_SIZE
+#define SCREEN_SIZE
+
 class ScreenSize {
 	private:
 		size_t w;
@@ -9,3 +12,5 @@ class ScreenSize {
 		size_t getHeight();
 		void toJS(nbind::cbOutput output);
 };
+
+#endif
