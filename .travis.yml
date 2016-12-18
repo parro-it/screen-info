@@ -1,10 +1,23 @@
+os:
+  - linux
+  - osx
+
+dist: trusty
+
 language: node_js
+
 node_js:
-  - 6
-sudo: false
-before_script:
-  - npm run setup
-script:
-  - npm run cover-test
-after_success:
-  - npm run cover-publish
+  - '7'
+  - '6'
+
+sudo: required
+
+addons:
+  apt:
+    packages:
+      - xvfb
+
+install:
+  - export DISPLAY=':99.0'
+  - Xvfb :99 -screen 0 1280x1024x24 > /dev/null 2>&1 &
+  - npm install
