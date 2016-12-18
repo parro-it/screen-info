@@ -55,6 +55,9 @@
 							]
 					}
 				},
+				'ldflags': [
+						'-Wl,-rpath,<(module_root_dir)',
+					],
 				"cflags": [
 					"-std=c++11",
 					"-stdlib=libc++"
