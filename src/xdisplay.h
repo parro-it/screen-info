@@ -19,8 +19,8 @@ extern "C"
 {
 #endif
 
-char *getXDisplay(void);
-void setXDisplay(char *name);
+const char *getXDisplay(void);
+void setXDisplay(const char *name);
 
 #ifdef __cplusplus
 }

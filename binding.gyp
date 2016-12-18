@@ -31,13 +31,17 @@
       ['OS == "linux"', {
         'link_settings': {
           'libraries': [
+            '-lpng',
+            '-lz',
             '-lX11',
+            '-lXtst'
           ]
         },
 
         'sources': [
           'src/linux-screen.cc',
-          'src/common.cc'
+          'src/common.cc',
+          'src/xdisplay.cc',
         ]
       }],
 

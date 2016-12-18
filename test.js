@@ -1,10 +1,18 @@
 import test from 'ava';
-import ScreenInfo from '.';
+import {ScreenSize, mainDisplaySize} from '.';
 
 test('exports a function', t => {
-	t.is(typeof ScreenInfo.mainDisplaySize, 'function');
+	t.is(typeof mainDisplaySize, 'function');
 });
 
 test('return something', t => {
-	t.is(ScreenInfo.mainDisplaySize(), 42);
+	const size = mainDisplaySize();
+	t.is(size.width, 1280);
+	t.is(size.height, 1024);
+});
+
+test('ScreenSize has width and height', t => {
+	const size = new ScreenSize(1, 2);
+	t.is(size.width, 1);
+	t.is(size.height, 2);
 });
