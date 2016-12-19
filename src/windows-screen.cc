@@ -1,3 +1,4 @@
+#include "nbind/nbind.h"
 #include <windows.h>
 #include "screen-size.h"
 
@@ -20,7 +21,7 @@ struct ScreenInfo {
 	}
 };
 
-#include "nbind/nbind.h"
+
 
 NBIND_CLASS(ScreenInfo) {
 	construct<>();
