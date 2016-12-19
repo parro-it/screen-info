@@ -1,4 +1,4 @@
-#include <wtypes.h>
+#include <windows.h>
 #include "screen-size.h"
 
 using namespace std;
