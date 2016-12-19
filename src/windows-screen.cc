@@ -2,7 +2,7 @@
 #include <windows.h>
 #include "screen-size.h"
 
-using namespace std;
+
 
 struct ScreenInfo {
 	static ScreenSize mainDisplaySize() {
