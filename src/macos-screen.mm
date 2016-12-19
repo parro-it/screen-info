@@ -1,5 +1,7 @@
 #include <ApplicationServices/ApplicationServices.h>
+
 #include "nbind/nbind.h"
+
 #include "screen-size.h"
 
 struct ScreenInfo {

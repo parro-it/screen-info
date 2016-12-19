@@ -10,7 +10,7 @@
 			['OS == "mac"', {
 			'sources': [
 				'src/macos-screen.mm',
-				'src/common.cc'
+				'src/screen-size.cc'
 			],
 				'include_dirs': [
 					'System/Library/Frameworks/CoreFoundation.Framework/Headers',
@@ -37,7 +37,7 @@
 
 				'sources': [
 					'src/linux-screen.cc',
-					'src/common.cc',
+					'src/screen-size.cc',
 					'src/xdisplay.cc',
 				]
 			}],
@@ -45,7 +45,7 @@
 			["OS=='win'", {
 				'sources': [
 					'src/windows-screen.cc',
-					'src/common.cc'
+					'src/screen-size.cc'
 				],
 				'msvs_settings': {
 					'VCCLCompilerTool': {

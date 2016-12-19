@@ -1,5 +1,6 @@
 #ifndef SCREEN_SIZE
 #define SCREEN_SIZE
+
 #include "nbind/api.h"
 
 class ScreenSize {
