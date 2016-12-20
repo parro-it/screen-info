@@ -7,7 +7,10 @@ const expected = process.platform === 'win32' ?
 
 const expectedMultiple = process.platform === 'linux' ?
 	[{width: 1024, height: 768, colorDepth: 24}, {width: 800, height: 600, colorDepth: 8}] :
-	[{width: 1024, height: 768, colorDepth: 24}];
+	(process.platform === 'win32' ?
+			[{width: 1024, height: 768, colorDepth: 32}] :
+			[{width: 1024, height: 768, colorDepth: 24}]
+	);
 
 /*
 const expectedMultiple = [{
