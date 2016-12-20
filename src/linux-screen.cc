@@ -22,7 +22,7 @@ std::vector<ScreenInfo::Screen> ScreenInfo::Screen::all() {
 	const unsigned screenCount = XScreenCount(display);
 
 	for (unsigned index  = 0; index < screenCount; index++) {
-		Screen * screen = XScreenOfDisplay(display,index);
+		::Screen * screen = XScreenOfDisplay(display,index);
 		result.push_back(ScreenInfo::Screen(
 			(size_t) DisplayWidth(display, screen),
 			(size_t) DisplayHeight(display, screen),

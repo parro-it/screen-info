@@ -5,7 +5,21 @@ const expected = process.platform === 'win32' ?
 	{width: 1024, height: 768, colorDepth: 32} :
 	{width: 1024, height: 768, colorDepth: 24};
 
+const expectedMultiple = process.platform === 'linux' ?
+	[{width: 1024, height: 768, colorDepth: 24}, {width: 800, height: 600, colorDepth: 32}] :
+	[{width: 1024, height: 768, colorDepth: 24}];
+
 /*
+const expectedMultiple = [{
+	width: 1920,
+	height: 1080,
+	colorDepth: 24
+}, {
+	width: 1280,
+	height: 960,
+	colorDepth: 24
+}];
+
 const expected = {width: 1920, height: 1080, colorDepth: 24};
 */
 
@@ -25,15 +39,7 @@ test('all: return all screens size', t => {
 	console.log(sizes);
 	t.deepEqual(
 		sizes.map(s => s.toJSON()),
-		[{
-			width: 1920,
-			height: 1080,
-			colorDepth: 24
-		}, {
-			width: 1280,
-			height: 960,
-			colorDepth: 24
-		}]
+		expectedMultiple
 	);
 });
 
