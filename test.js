@@ -10,6 +10,7 @@ test('exports a function', t => {
 
 test('return something', t => {
 	const size = mainDisplaySize();
+	console.log(size);
 	t.is(size.width, expected.width);
 	t.is(size.height, expected.height);
 	t.is(size.colorDepth, expected.colorDepth);
