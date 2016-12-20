@@ -12,6 +12,7 @@ Screen Screen::mainDisplaySize() {
 
 	return Screen(
 		(size_t)DisplayWidth(display, screen),
-		(size_t)DisplayHeight(display, screen)
+		(size_t)DisplayHeight(display, screen),
+		XDefaultDepth(display, screen)
 	);
 };
