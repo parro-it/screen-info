@@ -30,7 +30,7 @@ Screen Screen::main() {
 
 
 BOOL CALLBACK MonitorEnumProc(HMONITOR hMonitor, HDC hdcMonitor, LPRECT lprcMonitor, LPARAM dwData) {
-	std::vector<Screen> result = (std::vector<Screen>) *dwData;
+	std::vector<Screen> result =  * ((std::vector<Screen> *)dwData);
 	int bitsPerPixel = GetDeviceCaps(hdcMonitor, BITSPIXEL);
 	result.push_back(Screen(
 		(size_t) lprcMonitor->right,
@@ -41,6 +41,6 @@ BOOL CALLBACK MonitorEnumProc(HMONITOR hMonitor, HDC hdcMonitor, LPRECT lprcMoni
 
 std::vector<Screen> ScreenInfo::Screen::all() {
 	std::vector<Screen> result;
-	EnumDisplayMonitors(NULL, NULL, MonitorEnumProc, &result);
+	EnumDisplayMonitors(NULL, NULL, MonitorEnumProc, (LPARAM)&result);
 	return result;
 }
