@@ -4,13 +4,11 @@
 #include "xdisplay.h"
 #include "screen.h"
 
-using namespace ScreenInfo;
-
-Screen Screen::mainDisplaySize() {
+ScreenInfo::Screen ScreenInfo::Screen::mainDisplaySize() {
 	Display *display = XGetMainDisplay();
 	const int screen = DefaultScreen(display);
 
-	return Screen(
+	return ScreenInfo::Screen(
 		(size_t)DisplayWidth(display, screen),
 		(size_t)DisplayHeight(display, screen),
 		XDefaultDepth(display, screen)
