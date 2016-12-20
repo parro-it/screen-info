@@ -5,7 +5,7 @@
 using namespace ScreenInfo;
 
 Screen Screen::main() {
-	 RECT desktop;
+	RECT desktop;
 	// Get a handle to the desktop window
 	const HWND hDesktop = GetDesktopWindow();
 
@@ -43,6 +43,9 @@ BOOL CALLBACK MonitorEnumProc(HMONITOR hMonitor, HDC hdcMonitor, LPRECT lprcMoni
 
 std::vector<Screen> ScreenInfo::Screen::all() {
 	std::vector<Screen> result;
-	EnumDisplayMonitors(NULL, NULL, MonitorEnumProc, (LPARAM)&result);
+	const HWND hDesktop = GetDesktopWindow();
+	HDC dc = GetDC(hDesktop);
+
+	EnumDisplayMonitors(dc, NULL, MonitorEnumProc, (LPARAM)&result);
 	return result;
 }
