@@ -1,7 +1,10 @@
 import test from 'ava';
 import {Screen, mainDisplaySize} from '.';
 
-const expected = {width: 1024, height: 768, colorDepth: 24};
+const expected = process.platform === 'win32' ?
+	{width: 1024, height: 768, colorDepth: 32} :
+	{width: 1024, height: 768, colorDepth: 24};
+
 // {width: 1920, height: 1080, colorDepth: 24};
 // {width: 1024, height: 768, colorDepth: 24};
 
