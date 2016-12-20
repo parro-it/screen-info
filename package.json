@@ -16,7 +16,7 @@
     "install": "autogypi && npm run setup",
     "setup": "node-gyp configure build"
   },
-  "keywords": [],
+  "keywords": ["screen", "monitors", "monitor", "resolution", "size", "color", "display", "pixel", "width", "height"],
   "tonicExampleFilename": "example.js",
   "jsnext:main": "main.js",
   "devDependencies": {
