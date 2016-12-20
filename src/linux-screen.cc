@@ -15,8 +15,8 @@ ScreenInfo::Screen ScreenInfo::Screen::main() {
 	);
 };
 
-std::vector<Screen> ScreenInfo::Screen::all() {
-	std::vector<Screen> result;
+std::vector<ScreenInfo::Screen> ScreenInfo::Screen::all() {
+	std::vector<ScreenInfo::Screen> result;
 
 	Display *display = XGetMainDisplay();
 	const unsigned screenCount = XScreenCount(display);
