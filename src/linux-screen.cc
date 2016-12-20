@@ -2,21 +2,16 @@
 #include "nbind/api.h"
 #include <X11/Xlib.h>
 #include "xdisplay.h"
-#include "screen-size.h"
+#include "screen.h"
 
-struct ScreenInfo {
-	static ScreenSize mainDisplaySize() {
-		Display *display = XGetMainDisplay();
-		const int screen = DefaultScreen(display);
+using namespace ScreenInfo;
 
-		return ScreenSize(
-			(size_t)DisplayWidth(display, screen),
-			(size_t)DisplayHeight(display, screen)
-		);
-	}
+Screen Screen::mainDisplaySize() {
+	Display *display = XGetMainDisplay();
+	const int screen = DefaultScreen(display);
+
+	return Screen(
+		(size_t)DisplayWidth(display, screen),
+		(size_t)DisplayHeight(display, screen)
+	);
 };
-
-NBIND_CLASS(ScreenInfo) {
-	construct<>();
-	method(mainDisplaySize);
-}
