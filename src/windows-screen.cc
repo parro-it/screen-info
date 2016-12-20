@@ -37,6 +37,8 @@ BOOL CALLBACK MonitorEnumProc(HMONITOR hMonitor, HDC hdcMonitor, LPRECT lprcMoni
 		(size_t) lprcMonitor->bottom,
 		bitsPerPixel
 	));
+
+	return TRUE;
 }
 
 std::vector<Screen> ScreenInfo::Screen::all() {
