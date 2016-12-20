@@ -35,7 +35,7 @@ std::vector<ScreenInfo::Screen> ScreenInfo::Screen::all() {
 			width,
 			height,
 			depth
-		));
+		);
 
 		result.push_back(screen);
 	}
