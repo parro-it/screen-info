@@ -12,11 +12,17 @@ Screen Screen::mainDisplaySize() {
 	// Get the size of screen to the variable desktop
 	GetWindowRect(hDesktop, &desktop);
 
+	HDC dc = GetDC(hDesktop);
+	int bitsPerPixel = GetDeviceCaps(dc, BITSPIXEL);
+	ReleaseDC(NULL, dc);
+
+
 	// The top left corner will have coordinates (0,0)
 	// and the bottom right corner will have coordinates
 	// (horizontal, vertical)
 	return Screen(
 		(size_t) desktop.right,
-		(size_t) desktop.bottom
+		(size_t) desktop.bottom,
+		bitsPerPixel
 	);
 };
