@@ -34,7 +34,8 @@ NBIND_CLASS(Screen) {
   method(getWidth);
   method(getHeight);
   method(getColorDepth);
-  method(mainDisplaySize);
+  method(main);
+  method(all);
 }
 
 

@@ -17,7 +17,8 @@ namespace ScreenInfo {
 			int getColorDepth();
 			void toJS(nbind::cbOutput output);
 
-			static Screen mainDisplaySize();
+			static Screen main();
+			static std::vector<Screen> all();
 	};
 }
 

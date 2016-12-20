@@ -4,7 +4,7 @@
 
 using namespace ScreenInfo;
 
-Screen Screen::mainDisplaySize() {
+Screen Screen::main() {
 	 RECT desktop;
 	// Get a handle to the desktop window
 	const HWND hDesktop = GetDesktopWindow();

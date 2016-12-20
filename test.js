@@ -1,23 +1,40 @@
 import test from 'ava';
-import {Screen, mainDisplaySize} from '.';
+import {Screen, main} from '.';
 
 const expected = process.platform === 'win32' ?
 	{width: 1024, height: 768, colorDepth: 32} :
 	{width: 1024, height: 768, colorDepth: 24};
 
-// {width: 1920, height: 1080, colorDepth: 24};
-// {width: 1024, height: 768, colorDepth: 24};
+/*
+const expected = {width: 1920, height: 1080, colorDepth: 24};
+*/
 
 test('exports a function', t => {
-	t.is(typeof mainDisplaySize, 'function');
+	t.is(typeof main, 'function');
 });
 
-test('return something', t => {
-	const size = mainDisplaySize();
-	console.log(size);
+test('main: return main screen size', t => {
+	const size = main();
 	t.is(size.width, expected.width);
 	t.is(size.height, expected.height);
 	t.is(size.colorDepth, expected.colorDepth);
+});
+
+test('all: return all screens size', t => {
+	const sizes = Screen.all();
+	console.log(sizes);
+	t.deepEqual(
+		sizes.map(s => s.toJSON()),
+		[{
+			width: 1920,
+			height: 1080,
+			colorDepth: 24
+		}, {
+			width: 1280,
+			height: 960,
+			colorDepth: 24
+		}]
+	);
 });
 
 test('Screen has width and height', t => {

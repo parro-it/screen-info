@@ -4,7 +4,7 @@
 #include "xdisplay.h"
 #include "screen.h"
 
-ScreenInfo::Screen ScreenInfo::Screen::mainDisplaySize() {
+ScreenInfo::Screen ScreenInfo::Screen::main() {
 	Display *display = XGetMainDisplay();
 	const int screen = DefaultScreen(display);
 
