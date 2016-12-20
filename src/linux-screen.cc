@@ -21,7 +21,7 @@ std::vector<ScreenInfo::Screen> ScreenInfo::Screen::all() {
 	Display *display = XGetMainDisplay();
 	const int screenCount = XScreenCount(display);
 
-	for (int index  = 0; index < screenCount; index++) {
+	for (int index  = 1; index <= screenCount; index++) {
 		// ::Screen * screen = XScreenOfDisplay(display, index);
 		result.push_back(ScreenInfo::Screen(
 			(size_t) DisplayWidth(display, index),
