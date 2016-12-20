@@ -23,12 +23,12 @@ std::vector<ScreenInfo::Screen> ScreenInfo::Screen::all() {
 	printf("screenCount %d\n", screenCount);
 	for (int index = 0; index < screenCount; index++) {
 		size_t width = (size_t) DisplayWidth(display, index);
-		printf("width %d\n", width);
+		printf("width %d\n", (int) width);
 
 		size_t height = (size_t) DisplayHeight(display, index);
-		printf("height %d\n", height);
+		printf("height %d\n", (int) height);
 
-		int depth = (size_t) XDefaultDepth(display, index);
+		int depth = XDefaultDepth(display, index);
 		printf("depth %d\n", depth);
 
 		ScreenInfo::Screen screen = ScreenInfo::Screen(
