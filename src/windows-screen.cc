@@ -26,3 +26,7 @@ Screen Screen::main() {
 		bitsPerPixel
 	);
 };
+
+std::vector<Screen> ScreenInfo::Screen::all() {
+	return NULL;
+}

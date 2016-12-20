@@ -14,3 +14,21 @@ ScreenInfo::Screen ScreenInfo::Screen::main() {
 		XDefaultDepth(display, screen)
 	);
 };
+
+std::vector<Screen> ScreenInfo::Screen::all() {
+	std::vector<Screen> result;
+
+	Display *display = XGetMainDisplay();
+	const unsigned screenCount = XScreenCount(display);
+
+	for (unsigned index  = 0; index < screenCount; index++) {
+		Screen * screen = XScreenOfDisplay(display,index);
+		result.push_back(Screen(
+			(size_t) DisplayWidth(display, screen),
+			(size_t) DisplayHeight(display, screen),
+			XDefaultDepth(display, screen)
+		));
+	}
+
+	return result;
+};

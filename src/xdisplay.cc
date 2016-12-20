@@ -4,19 +4,12 @@
 #include <string.h>
 
 static Display *mainDisplay = NULL;
-static int registered = 0;
-static const char *displayName = ":0.0";
-static int hasDisplayNameChanged = 0;
 
 Display *XGetMainDisplay(void)
 {
-	/* Close the display if displayName has changed */
-	if (hasDisplayNameChanged) {
-		XCloseMainDisplay();
-		hasDisplayNameChanged = 0;
-	}
-
 	if (mainDisplay == NULL) {
+		const char *displayName = ":0.0";
+
 		/* First try the user set displayName */
 		mainDisplay = XOpenDisplay(displayName);
 
@@ -27,10 +20,10 @@ Display *XGetMainDisplay(void)
 
 		if (mainDisplay == NULL) {
 			fputs("Could not open main display\n", stderr);
-		} else if (!registered) {
-			atexit(&XCloseMainDisplay);
-			registered = 1;
 		}
+
+		atexit(&XCloseMainDisplay);
+
 	}
 
 	return mainDisplay;
@@ -42,15 +35,4 @@ void XCloseMainDisplay(void)
 		XCloseDisplay(mainDisplay);
 		mainDisplay = NULL;
 	}
-}
-
-const char *getXDisplay(void)
-{
-	return displayName;
-}
-
-void setXDisplay(const char *name)
-{
-	displayName = strdup(name);
-	hasDisplayNameChanged = 1;
 }
