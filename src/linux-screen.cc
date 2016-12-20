@@ -20,14 +20,24 @@ std::vector<ScreenInfo::Screen> ScreenInfo::Screen::all() {
 
 	Display *display = XGetMainDisplay();
 	const int screenCount = XScreenCount(display);
+	printf("screenCount %d\n", screenCount);
+	for (int index = 0; index < screenCount; index++) {
+		size_t width = (size_t) DisplayWidth(display, index);
+		printf("width %d\n", width);
 
-	for (int index  = 1; index <= screenCount; index++) {
-		// ::Screen * screen = XScreenOfDisplay(display, index);
-		result.push_back(ScreenInfo::Screen(
-			(size_t) DisplayWidth(display, index),
-			(size_t) DisplayHeight(display, index),
-			XDefaultDepth(display, index)
+		size_t height = (size_t) DisplayHeight(display, index);
+		printf("height %d\n", height);
+
+		int depth = (size_t) XDefaultDepth(display, index);
+		printf("depth %d\n", depth);
+
+		ScreenInfo::Screen screen = ScreenInfo::Screen(
+			width,
+			height,
+			depth
 		));
+
+		result.push_back(screen);
 	}
 
 	return result;
