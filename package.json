@@ -1,6 +1,6 @@
 {
   "name": "screen-info",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Multiplatform screen & monitors info",
   "repository": "parro-it/screen-info",
   "author": "Andrea Parodi <andrea@parro.it>",
