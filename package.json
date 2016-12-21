@@ -18,6 +18,7 @@
     "pixels",
     "width",
     "heigth",
+    "height",
     "monitor",
     "size",
     "color",
@@ -29,7 +30,6 @@
     "platform"
   ],
   "tonicExampleFilename": "example.js",
-  "jsnext:main": "main.js",
   "devDependencies": {
     "ava": "^0.17.0",
     "xo": "^0.17.1"
