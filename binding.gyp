@@ -4,26 +4,19 @@
 			"auto.gypi"
 		],
 
-
-
 		'conditions': [
 			['OS == "mac"', {
 			'sources': [
 				'src/macos-screen.mm',
-				'src/common.cc'
+				'src/screen.cc'
 			],
 				'include_dirs': [
-					'System/Library/Frameworks/CoreFoundation.Framework/Headers',
-					'System/Library/Frameworks/Carbon.Framework/Headers',
 					'System/Library/Frameworks/ApplicationServices.framework/Headers',
-					'System/Library/Frameworks/OpenGL.framework/Headers',
 				],
 				'link_settings': {
 					'libraries': [
-						'-framework Carbon',
-						'-framework CoreFoundation',
 						'-framework ApplicationServices',
-						'-framework OpenGL'
+						'-framework AppKit',
 					]
 				}
 			}],
@@ -37,7 +30,7 @@
 
 				'sources': [
 					'src/linux-screen.cc',
-					'src/common.cc',
+					'src/screen.cc',
 					'src/xdisplay.cc',
 				]
 			}],
@@ -45,7 +38,7 @@
 			["OS=='win'", {
 				'sources': [
 					'src/windows-screen.cc',
-					'src/common.cc'
+					'src/screen.cc'
 				],
 				'msvs_settings': {
 					'VCCLCompilerTool': {

@@ -1,9 +1,10 @@
 const nbind = require('nbind');
-const ScreenSize = require('./src/screen-size');
+const Screen = require('./src/screen');
 
 const binding = nbind.init(__dirname);
 
-binding.bind('ScreenSize', ScreenSize);
+binding.bind('Screen', Screen);
 
-exports.mainDisplaySize = binding.lib.ScreenInfo.mainDisplaySize;
-exports.ScreenSize = ScreenSize;
+Screen.main = binding.lib.Screen.main;
+Screen.all = binding.lib.Screen.all;
+module.exports = Screen;

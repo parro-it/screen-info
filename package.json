@@ -5,10 +5,6 @@
   "repository": "parro-it/screen-info",
   "author": "Andrea Parodi <andrea@parro.it>",
   "license": "MIT",
-  "files": [
-    "index.js",
-    "example.js"
-  ],
   "scripts": {
     "test": "ava && xo",
     "autogypi": "autogypi",
@@ -16,7 +12,7 @@
     "install": "autogypi && npm run setup",
     "setup": "node-gyp configure build"
   },
-  "keywords": ["screen", "resolution", "pixels", "width", "heigth","monitor", "multiplatform","multi-platform", "native", "multi", "platform"],
+  "keywords": ["screen", "resolution", "pixels", "width", "heigth","monitor","size", "color", "display", "multiplatform","multi-platform", "native", "multi", "platform"],
   "tonicExampleFilename": "example.js",
   "jsnext:main": "main.js",
   "devDependencies": {
