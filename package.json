@@ -1,6 +1,6 @@
 {
   "name": "screen-info",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Multiplatform screen & monitors info",
   "repository": "parro-it/screen-info",
   "author": "Andrea Parodi <andrea@parro.it>",
@@ -12,7 +12,22 @@
     "install": "autogypi && npm run setup",
     "setup": "node-gyp configure build"
   },
-  "keywords": ["screen", "resolution", "pixels", "width", "heigth","monitor","size", "color", "display", "multiplatform","multi-platform", "native", "multi", "platform"],
+  "keywords": [
+    "screen",
+    "resolution",
+    "pixels",
+    "width",
+    "heigth",
+    "monitor",
+    "size",
+    "color",
+    "display",
+    "multiplatform",
+    "multi-platform",
+    "native",
+    "multi",
+    "platform"
+  ],
   "tonicExampleFilename": "example.js",
   "jsnext:main": "main.js",
   "devDependencies": {
@@ -20,7 +35,7 @@
     "xo": "^0.17.1"
   },
   "files": [
-  	"example.js",
+    "example.js",
     "index.js",
     "src",
     "binding.gyp",
