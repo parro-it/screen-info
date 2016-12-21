@@ -16,13 +16,22 @@
     "install": "autogypi && npm run setup",
     "setup": "node-gyp configure build"
   },
-  "keywords": [],
+  "keywords": ["screen", "resolution", "pixels", "width", "heigth","monitor", "multiplatform","multi-platform", "native", "multi", "platform"],
   "tonicExampleFilename": "example.js",
   "jsnext:main": "main.js",
   "devDependencies": {
     "ava": "^0.17.0",
     "xo": "^0.17.1"
   },
+  "files": [
+  	"example.js",
+    "index.js",
+    "src",
+    "binding.gyp",
+    "auto-top.gypi",
+    "auto.gypi",
+    "autogypi.json"
+  ],
   "dependencies": {
     "autogypi": "^0.2.2",
     "nbind": "^0.3.5",
