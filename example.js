@@ -1,4 +1,5 @@
-const Screen = require('.');
+const Screen = require('screen-info');
+// This example cannot be run from browser
 
 const size = Screen.main();
 console.log(`
