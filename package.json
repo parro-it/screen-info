@@ -31,8 +31,8 @@
   ],
   "tonicExampleFilename": "example.js",
   "devDependencies": {
-    "ava": "^0.17.0",
-    "xo": "^0.17.1"
+    "ava": "^0.18.2",
+    "xo": "^0.18.1"
   },
   "files": [
     "example.js",
