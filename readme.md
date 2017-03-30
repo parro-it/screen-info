@@ -1,5 +1,7 @@
 # screen-info
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/parro-it/screen-info.svg)](https://greenkeeper.io/)
+
 > A native multiplatform module to query the system OS for displays info.
 
 ## Usage
