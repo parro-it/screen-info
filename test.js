@@ -13,6 +13,7 @@ const expectedMultiple = process.platform === 'linux' ?
 	);
 
 /*
+Development resolution
 const expectedMultiple = [{
 	width: 1920,
 	height: 1080,
