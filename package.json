@@ -45,7 +45,7 @@
   ],
   "dependencies": {
     "autogypi": "^0.2.2",
-    "nbind": "^0.3.5",
+    "nbind": "^0.3.11",
     "node-gyp": "^3.4.0"
   }
 }
