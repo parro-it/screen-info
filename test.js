@@ -14,8 +14,8 @@ const expected =
         width: 1024,
         height: 768,
         colorDepth: 24,
-        widthMM: 0,
-        heightMM: 0
+        widthMM: 260,
+        heightMM: 195
       };
 
 const expectedMultiple =
@@ -83,10 +83,10 @@ test("exports a function", t => {
 
 test("main: return main screen size", t => {
   const size = Screen.main();
-  t.is(size.width, expected.width);
-  t.is(size.height, expected.height);
   t.is(size.widthMM, expected.widthMM);
   t.is(size.heightMM, expected.heightMM);
+  t.is(size.width, expected.width);
+  t.is(size.height, expected.height);
   t.is(size.colorDepth, expected.colorDepth);
 });
 
