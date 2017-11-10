@@ -1,7 +1,10 @@
 class Screen {
-  constructor(width, height, colorDepth) {
+  // eslint-disable-next-line max-params
+  constructor(width, height, widthMM, heightMM, colorDepth) {
     this._width = width;
     this._height = height;
+    this._widthMM = widthMM;
+    this._heightMM = heightMM;
     this._colorDepth = colorDepth;
   }
 
@@ -13,17 +16,31 @@ class Screen {
     return this._height;
   }
 
+  get widthMM() {
+    return this._widthMM;
+  }
+
+  get heightMM() {
+    return this._heightMM;
+  }
+
   get colorDepth() {
     return this._colorDepth;
   }
 
   fromJS(output) {
-    output(this._width, this._height, this._colorDepth);
+    output(
+      this._width,
+      this._height,
+      this._widthMM,
+      this._heightMM,
+      this._colorDepth
+    );
   }
 
   toJSON() {
-    const { width, height, colorDepth } = this;
-    return { width, height, colorDepth };
+    const { width, height, widthMM, heightMM, colorDepth } = this;
+    return { width, height, widthMM, heightMM, colorDepth };
   }
 
   toString(output = this) {
