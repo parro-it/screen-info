@@ -6,7 +6,8 @@ dist: trusty
 language: node_js
 
 node_js:
-  - '7'
+  - 'latest'
+  - '8'
   - '6'
 
 sudo: required
