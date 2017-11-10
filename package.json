@@ -6,7 +6,7 @@
   "author": "Andrea Parodi <andrea@parro.it>",
   "license": "MIT",
   "scripts": {
-    "test": "ava && xo",
+    "test": "linterjs . && ava",
     "autogypi": "autogypi",
     "node-gyp": "node-gyp",
     "install": "autogypi && npm run setup",
@@ -32,7 +32,7 @@
   "tonicExampleFilename": "example.js",
   "devDependencies": {
     "ava": "^0.23.0",
-    "xo": "^0.18.1"
+    "linterjs": "^1.10.1"
   },
   "files": [
     "example.js",
