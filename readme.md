@@ -16,6 +16,8 @@ console.log(`
 	Current screen size is ${mainScreen}
 	${mainScreen.width} pixels width,
 	${mainScreen.height} pixels height,
+  ${mainScreen.widthMM} mm width,
+  ${mainScreen.heightMM} mm height,
 	${mainScreen.colorDepth} bits per pixels
 `);
 ```
@@ -26,6 +28,8 @@ This will output
 	Current screen size is 1920x1080x24
 	1920 pixels width,
 	1080 pixels height,
+  360 mm width,
+  210 mm height,
 	24 bits per pixels
 ```
 
