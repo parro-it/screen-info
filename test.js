@@ -25,15 +25,15 @@ const expectedMultiple =
           width: 1024,
           height: 768,
           colorDepth: 24,
-          widthMM: 342,
-          heightMM: 271
+          widthMM: 195,
+          heightMM: 260
         },
         {
           width: 800,
           height: 600,
           colorDepth: 8,
-          widthMM: 342,
-          heightMM: 271
+          widthMM: 152,
+          heightMM: 203
         }
       ]
     : process.platform === "win32"
