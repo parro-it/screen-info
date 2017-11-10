@@ -66,7 +66,7 @@ const expectedMultiple = [
     heightMM: 271
   }
 ];
-*/
+
 
 const expected = {
   width: 1280,
@@ -75,6 +75,7 @@ const expected = {
   widthMM: 342,
   heightMM: 271
 };
+*/
 
 test("exports a function", t => {
   t.is(typeof Screen.main, "function");
