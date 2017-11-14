@@ -10,6 +10,7 @@
     "autogypi": "autogypi",
     "node-gyp": "node-gyp",
     "install": "autogypi && npm run setup",
+    "build": "node-gyp build",
     "setup": "node-gyp configure build"
   },
   "keywords": [
