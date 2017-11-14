@@ -1,7 +1,6 @@
 import test from "ava";
 import Screen from ".";
 
-/*
 const expected =
   process.platform === "win32"
     ? {
@@ -64,8 +63,8 @@ const expectedMultiple =
             heightMM: 270
           }
         ];
-*/
-/* Development resolution */
+
+/* Development resolution
 const expectedMultiple = [
   {
     width: 1920,
@@ -90,7 +89,7 @@ const expected = {
   widthMM: 473,
   heightMM: 266
 };
-
+*/
 test("exports a function", t => {
   t.is(typeof Screen.main, "function");
 });
