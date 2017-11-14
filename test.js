@@ -59,24 +59,29 @@ const expectedMultiple =
 /* Development resolution
 const expectedMultiple = [
   {
-    width: 1280,
-    height: 1024,
+    width: 1920,
+    height: 1080,
     colorDepth: 24,
-    widthMM: 342,
-    heightMM: 271
+    widthMM: 473,
+    heightMM: 266
+  },
+  {
+    width: 1400,
+    height: 1050,
+    widthMM: 493,
+    heightMM: 370,
+    colorDepth: 24
   }
 ];
 
-
 const expected = {
-  width: 1280,
-  height: 1024,
+  width: 1920,
+  height: 1080,
   colorDepth: 24,
-  widthMM: 342,
-  heightMM: 271
+  widthMM: 473,
+  heightMM: 266
 };
 */
-
 test("exports a function", t => {
   t.is(typeof Screen.main, "function");
 });
@@ -92,6 +97,7 @@ test("main: return main screen size", t => {
 
 test("all: return all screens size", t => {
   const sizes = Screen.all();
+  // ? console.log({ sizes: sizes.map(s => s.toJSON()) });
   t.deepEqual(sizes.map(s => s.toJSON()), expectedMultiple);
 });
 
