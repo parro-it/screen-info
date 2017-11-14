@@ -10,13 +10,21 @@ const expected =
         widthMM: 0,
         heightMM: 0
       }
-    : {
-        width: 1024,
-        height: 768,
-        colorDepth: 24,
-        widthMM: 260,
-        heightMM: 195
-      };
+    : process.platform === "linux"
+      ? {
+          width: 1024,
+          height: 768,
+          colorDepth: 24,
+          widthMM: 260,
+          heightMM: 195
+        }
+      : {
+          width: 1024,
+          height: 768,
+          colorDepth: 24,
+          widthMM: 361,
+          heightMM: 270
+        };
 
 const expectedMultiple =
   process.platform === "linux"
