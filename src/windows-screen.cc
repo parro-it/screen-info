@@ -14,6 +14,9 @@ Screen Screen::main() {
 
   HDC dc = GetDC(hDesktop);
   int bitsPerPixel = GetDeviceCaps(dc, BITSPIXEL);
+  int hSize=GetDeviceCaps(screen,HORZSIZE);
+  int vSize=GetDeviceCaps(screen,VERTSIZE);
+
   ReleaseDC(NULL, dc);
 
 
@@ -23,8 +26,8 @@ Screen Screen::main() {
   return Screen(
     (size_t) desktop.right,
     (size_t) desktop.bottom,
-    (size_t) 0,
-    (size_t) 0,
+    (size_t) hSize,
+    (size_t) vSize,
     bitsPerPixel
   );
 };
@@ -34,11 +37,14 @@ Screen Screen::main() {
 BOOL CALLBACK MonitorEnumProc(HMONITOR hMonitor, HDC hdcMonitor, LPRECT lprcMonitor, LPARAM dwData) {
   std::vector<Screen> *result =  (std::vector<Screen> *)dwData;
   int bitsPerPixel = GetDeviceCaps(hdcMonitor, BITSPIXEL);
+  int hSize=GetDeviceCaps(screen,HORZSIZE);
+  int vSize=GetDeviceCaps(screen,VERTSIZE);
+
   result->push_back(Screen(
     (size_t) lprcMonitor->right,
     (size_t) lprcMonitor->bottom,
-    (size_t) 0,
-    (size_t) 0,
+    (size_t) hSize,
+    (size_t) vSize,
     bitsPerPixel
   ));
 
