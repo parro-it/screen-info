@@ -1,6 +1,7 @@
 import test from "ava";
 import Screen from ".";
 
+/*
 const expected =
   process.platform === "win32"
     ? {
@@ -63,8 +64,8 @@ const expectedMultiple =
             heightMM: 270
           }
         ];
-
-/* Development resolution
+*/
+/* Development resolution */
 const expectedMultiple = [
   {
     width: 1920,
@@ -89,14 +90,13 @@ const expected = {
   widthMM: 473,
   heightMM: 266
 };
-*/
+
 test("exports a function", t => {
   t.is(typeof Screen.main, "function");
 });
 
 test("main: return main screen size", t => {
   const size = Screen.main();
-  console.log(size.toJSON());
   t.is(size.widthMM, expected.widthMM);
   t.is(size.heightMM, expected.heightMM);
   t.is(size.width, expected.width);
@@ -106,7 +106,6 @@ test("main: return main screen size", t => {
 
 test("all: return all screens size", t => {
   const sizes = Screen.all();
-  console.log(sizes.map(s => s.toJSON()));
   t.deepEqual(sizes.map(s => s.toJSON()), expectedMultiple);
 });
 
@@ -117,6 +116,22 @@ test("Screen has width and height", t => {
   t.is(size.widthMM, 3);
   t.is(size.heightMM, 4);
   t.is(size.colorDepth, 5);
+});
+
+test("Screen has diagonal in inches", t => {
+  const size = new Screen(0, 0, 473, 266, 0);
+  t.is(size.diagonalInches, 21.36);
+});
+
+test("Screen has dpi", t => {
+  const size = new Screen(1920, 1080, 473, 266, 0);
+  t.is(size.dpi, 103.132);
+});
+
+test("Screen has calculated prop for inches sizes", t => {
+  const size = new Screen(0, 0, 30, 40, 0);
+  t.is(size.widthInches, 1.181);
+  t.is(size.heightInches, 1.575);
 });
 
 test("Screen has custom toString", t => {

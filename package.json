@@ -6,7 +6,7 @@
   "author": "Andrea Parodi <andrea@parro.it>",
   "license": "MIT",
   "scripts": {
-    "test": "linterjs . && ava",
+    "test": "ava && linterjs .",
     "autogypi": "autogypi",
     "node-gyp": "node-gyp",
     "install": "autogypi && npm run setup",
