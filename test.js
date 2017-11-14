@@ -51,8 +51,8 @@ const expectedMultiple =
             width: 1024,
             height: 768,
             colorDepth: 24,
-            widthMM: 0,
-            heightMM: 0
+            widthMM: 361,
+            heightMM: 270
           }
         ];
 
@@ -88,6 +88,7 @@ test("exports a function", t => {
 
 test("main: return main screen size", t => {
   const size = Screen.main();
+  console.log(size.map(s => s.toJSON()));
   t.is(size.widthMM, expected.widthMM);
   t.is(size.heightMM, expected.heightMM);
   t.is(size.width, expected.width);
@@ -97,7 +98,7 @@ test("main: return main screen size", t => {
 
 test("all: return all screens size", t => {
   const sizes = Screen.all();
-  // ? console.log({ sizes: sizes.map(s => s.toJSON()) });
+  console.log(sizes.map(s => s.toJSON()));
   t.deepEqual(sizes.map(s => s.toJSON()), expectedMultiple);
 });
 
