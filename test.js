@@ -88,7 +88,7 @@ test("exports a function", t => {
 
 test("main: return main screen size", t => {
   const size = Screen.main();
-  console.log(size.map(s => s.toJSON()));
+  console.log(size.toJSON());
   t.is(size.widthMM, expected.widthMM);
   t.is(size.heightMM, expected.heightMM);
   t.is(size.width, expected.width);
