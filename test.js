@@ -1,19 +1,6 @@
 import test from "ava";
 import Screen from ".";
 
- width: 1024,
-  height: 768,
-  widthMM: 271,
-  heightMM: 203,
-  colorDepth: 32 }
-  × main: return main screen size
-[ { width: 1024,
-    height: 768,
-    widthMM: 271,
-    heightMM: 203,
-    colorDepth: 32 } ]
-
-
 const expected =
   process.platform === "win32"
     ? {
