@@ -1,11 +1,8 @@
 # screen-info
 
 [![greenkeeper](https://badges.greenkeeper.io/parro-it/screen-info.svg)](https://greenkeeper.io/)
-
-[![travis ci](https://img.shields.io/travis/parro-it/screen-info/master.svg?style=plastic)](http://travis-ci.org/parro-it/screen-info)
-
-[![npm version](https://img.shields.io/npm/v/@posix/screen-info.svg?style=plastic)](https://npmjs.org/package/screen-info)
-
+[![travis ci](https://img.shields.io/travis/parro-it/screen-info/master.svg)](http://travis-ci.org/parro-it/screen-info)
+[![npm version](https://img.shields.io/npm/v/screen-info.svg)](https://npmjs.org/package/screen-info)
 [![appveyor ci](https://ci.appveyor.com/api/projects/status/0j904vwgk43vuh3h/branch/master?svg=true)](https://ci.appveyor.com/project/parro-it/screen-info)
 
 > A native multiplatform module to query the system OS for displays info.
