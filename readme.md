@@ -4,6 +4,7 @@
 [![travis ci](https://img.shields.io/travis/parro-it/screen-info/master.svg)](http://travis-ci.org/parro-it/screen-info)
 [![npm version](https://img.shields.io/npm/v/screen-info.svg)](https://npmjs.org/package/screen-info)
 [![appveyor ci](https://ci.appveyor.com/api/projects/status/0j904vwgk43vuh3h/branch/master?svg=true)](https://ci.appveyor.com/project/parro-it/screen-info)
+[![npm downloads](https://img.shields.io/npm/dt/screen-info.svg)](https://npmjs.org/package/screen-info)
 
 > A native multiplatform module to query the system OS for displays info.
 
@@ -35,9 +36,6 @@ This will output
   210 mm height,
   24 bits per pixels
 ```
-
-[![Travis Build Status](https://img.shields.io/travis/parro-it/screen-info/master.svg)](http://travis-ci.org/parro-it/screen-info)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/0j904vwgk43vuh3h?svg=true)](https://ci.appveyor.com/project/parro-it/screen-info)[![NPM downloads](https://img.shields.io/npm/dt/screen-info.svg)](https://npmjs.org/package/screen-info)
 
 ## API
 
