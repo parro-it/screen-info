@@ -33,7 +33,7 @@
   "tonicExampleFilename": "example.js",
   "devDependencies": {
     "@posix/px": "^0.2.0",
-    "ava": "^0.24.0",
+    "ava": "^1.2.1",
     "linterjs": "^1.10.1"
   },
   "files": [
